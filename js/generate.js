@@ -2,7 +2,7 @@ import remove from './remove.js';
 
 const generate = {};
 
-generate.allAmiibos = () => {
+generate.allAmiibos = async () => {
     for (let i = 1; i < sessionStorage.length; i++) {
         let key = sessionStorage.key(i);
         let amiibo = JSON.parse(sessionStorage.getItem(key));
@@ -12,7 +12,7 @@ generate.allAmiibos = () => {
     
 };
 
-generate.amiibo = (amiibo) => {
+generate.amiibo = async (amiibo) => {
     console.log(amiibo);
     let mainDiv = document.querySelector('#main-div');
     let amiiboCard = document.createElement('div');
@@ -41,7 +41,6 @@ generate.amiibo = (amiibo) => {
         console.log(amiibo.character);
         let retrievedCharacter = JSON.parse(sessionStorage.getItem(amiibo.character));
         localStorage.setItem(amiibo.character, JSON.stringify(retrievedCharacter));
-        
         
     });
 
