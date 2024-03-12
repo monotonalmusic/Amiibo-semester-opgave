@@ -1,12 +1,11 @@
 import generate from './generate.js';
-import storage from './storage.js';
+import storage from './storage.js'; 
 
-storage.characters();
+document.addEventListener('DOMContentLoaded', function() {
+    storage.characters().then((generate.allAmiibos()))
+});
+    
 
-generate.amiibo(JSON.parse(localStorage.getItem('mario8bit')));
-
-
-
-// let retrievedmario8bit = JSON.parse(localStorage.getItem('mario8bit'));
+// let retrievedmario8bit = JSON.parse(sessionStorage.getItem('mario8bit'));
 
 // console.log(retrievedmario8bit);
