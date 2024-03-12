@@ -1,13 +1,14 @@
 const remove = {};
 
-remove.cartListener = async () => {
+remove.cartListener = async (amiibo) => {
     console.log('fire')
     let cartItems = document.querySelectorAll('.cart-item');
     console.log(cartItems.length)
         cartItems.forEach(item => {
             item.addEventListener('click', () => {
-                console.log('clicked')
+                localStorage.removeItem(amiibo.character);
                 item.remove();
+                
             });
         });
 }
