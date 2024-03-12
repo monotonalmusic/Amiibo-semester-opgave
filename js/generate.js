@@ -22,20 +22,19 @@ generate.amiibo = async (amiibo) => {
     amiiboCard.innerHTML = `
         <h2>${amiibo.character}</h2>
         <img src="${amiibo.image}"class="big-amiibo-img" alt="${amiibo.character}">
-        <p>${amiibo.gameSeries}</p>
-        <button class="add-cart-button">Click me</button>
+        <button class="add-cart-button pretty-button">Click me</button>
     `;
     mainDiv.appendChild(amiiboCard);
     let button = amiiboCard.querySelector('.add-cart-button');
     button.addEventListener('click', () => {
-        let cart = document.querySelector('#cart');
+        let cartContent = document.querySelector('#cart-content');
         let cartItem = document.createElement('div');
         cartItem.classList.add('cart-item');
         cartItem.innerHTML = `
-            <h3>${amiibo.amiiboSeries}</h3>
+            <h3>${amiibo.character}</h3>
             <p>${amiibo.gameSeries}</p>
         `;
-        cart.appendChild(cartItem);
+        cartContent.appendChild(cartItem);
         remove.cartListener(amiibo);
         //move this to another function
         console.log(amiibo.character);
