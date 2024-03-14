@@ -23,7 +23,6 @@ h1, h2, h3 {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    gap: .5rem;
 }
 
 
@@ -74,11 +73,17 @@ h1, h2, h3 {
 
 #cart-content {
     display: none;
+    margin-bottom: 1rem;
 
 }
 
 #checkout-button {
     width: 100%;
+}
+
+.pretty-button.remove-button {
+    background-color: #E5131C;
+    width: 75px;
 }
 
 .cart-item {
@@ -87,7 +92,6 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: .5rem;
     background-color: #f8f8f8;
 
 }
@@ -134,24 +138,24 @@ h1, h2, h3 {
 
 
 .pretty-button {
-background-color: transparent;
-border: 1px solid white;
-border-radius: 8px;
-box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-box-sizing: border-box;
-color: #0f1111;
-cursor: pointer;
-display: inline-block;
-font-size: 13px;
-line-height: 29px;
-padding: 0 10px 0 11px;
-position: relative;
-text-align: center;
-text-decoration: none;
-user-select: none;
--webkit-user-select: none;
-vertical-align: middle;
-width: 100px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    width: 100px;
 }
 
 .pretty-button:hover {
