@@ -21,9 +21,8 @@ listeners.addCart = (amiibo) => {
 listeners.removeCart = (amiibo) => {
     if (localStorage.length > 0) {
         console.log(amiibo.character)
-        let cartItem = document.querySelector(`#${amiibo.character}-cart`);
-        console.log(cartItem)
-        cartItem.addEventListener('click', (e) => {
+        let cartItemButton = document.querySelector(`#${amiibo.character}-button`);
+        cartItemButton.addEventListener('click', (e) => {
             let target = e.target.parentElement;
             localStorage.removeItem(amiibo.character);
             target.remove();

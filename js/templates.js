@@ -23,7 +23,7 @@ templates.cartItem = (amiibo) => {
     cartItem.id = `${amiibo.character}-cart`;
     cartItem.innerHTML = `
         <h3>${amiibo.character}</h3>
-        <p>${amiibo.gameSeries}</p>
+        <button class="pretty-button" id="${amiibo.character}-button">Remove</button>
     `;
     cartContent.appendChild(cartItem);
     listeners.removeCart(amiibo);
