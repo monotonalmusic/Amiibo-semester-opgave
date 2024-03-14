@@ -1,5 +1,4 @@
 import listeners from './addlisteners.js';
-import remove from './remove.js';
 import templates from './templates.js';
 
 const generate = {};

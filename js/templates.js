@@ -1,4 +1,4 @@
-import remove from './remove.js';
+import listeners from "./addlisteners.js";
 
 const templates = {}; 
 
@@ -26,7 +26,7 @@ templates.cartItem = (amiibo) => {
         <p>${amiibo.gameSeries}</p>
     `;
     cartContent.appendChild(cartItem);
-    remove.cartListener(amiibo);
+    listeners.removeCart(amiibo);
 }
 
 export default templates;
