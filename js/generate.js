@@ -27,7 +27,24 @@ generate.cart = async () => {
         let amiibo = JSON.parse(localStorage.getItem(key));
         templates.cartItem(amiibo);
     }
-}
+};
+
+// generate.mario = async () => {
+
+// };
+
+// generate.luigi = async () => {
+
+// };
+
+// generate.yoshi = async () => {
+
+// };
+
+// generate.zelda = async () => {
+
+// };
+
 
 
 export default generate;

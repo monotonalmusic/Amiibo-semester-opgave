@@ -18,6 +18,11 @@ h1, h2, h3 {
     font-family: Josefin Sans, sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 #cart .show {
     display: flex;
     flex-flow: column;
@@ -57,7 +62,7 @@ h1, h2, h3 {
       font-size: 1.5rem;
       background: #ff0000;
       color: #fff;
-      padding: 0 5px;
+      padding: 3 5 3 5px;
       vertical-align: top;
       margin-left: -20px;
 }
@@ -78,7 +83,7 @@ h1, h2, h3 {
 }
 
 #checkout-button {
-    width: 100%;
+    width: 125px;
 }
 
 .pretty-button.remove-button {
@@ -160,4 +165,8 @@ h1, h2, h3 {
 
 .pretty-button:hover {
 background-color: transparent;
+}
+
+.big-amiibo-img {
+    cursor: pointer;
 }

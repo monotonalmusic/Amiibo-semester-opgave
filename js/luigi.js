@@ -9,7 +9,7 @@ storage.characters().then(() => {
     listeners.cart();
 
     if (sessionStorage.length > 0) {
-        generate.allAmiibos();
+        generate.luigi();
     }
 
     if (localStorage.length > 0) {
@@ -18,4 +18,3 @@ storage.characters().then(() => {
         badge.textContent = localStorage.length;
     }
 });
-
