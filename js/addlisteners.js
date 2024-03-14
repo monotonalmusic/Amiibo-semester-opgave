@@ -32,4 +32,14 @@ listeners.removeCart = (amiibo) => {
         });
     }
 }
+
+listeners.cart = () => {
+    let cartIcon = document.querySelector('#cart-icon-div');
+    cartIcon.addEventListener('click', () => {
+        console.log('cart clicked')
+        let cartContent = document.querySelector('#cart-content');
+        cartContent.classList.toggle('show');
+    });
+}
+
 export default listeners;

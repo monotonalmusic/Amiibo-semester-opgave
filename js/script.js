@@ -1,8 +1,11 @@
+import listeners from './addlisteners.js';
 import generate from './generate.js';
 import storage from './storage.js'; 
 
 
 storage.characters().then(() => {
+    listeners.cart();
+
     if (sessionStorage.length > 0) {
         generate.allAmiibos();
     }

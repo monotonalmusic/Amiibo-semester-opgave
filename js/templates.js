@@ -11,7 +11,7 @@ templates.amiiboCard = (amiibo) => {
     amiiboCard.innerHTML = `
         <h2>${amiibo.character}</h2>
         <img src="${amiibo.image}"class="big-amiibo-img" alt="${amiibo.character}">
-        <button class="add-cart-button pretty-button">Click me</button>
+        <button class="add-cart-button pretty-button">Add to cart</button>
     `;
     mainDiv.appendChild(amiiboCard);
 };
