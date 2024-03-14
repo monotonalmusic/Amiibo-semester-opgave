@@ -1,4 +1,7 @@
+import remove from './remove.js';
+
 const templates = {}; 
+
 
 templates.amiiboCard = (amiibo) => {
     let mainDiv = document.querySelector('#main-div');
@@ -17,11 +20,13 @@ templates.cartItem = (amiibo) => {
     let cartContent = document.querySelector('#cart-content');
     let cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
+    cartItem.id = `${amiibo.character}-cart`;
     cartItem.innerHTML = `
         <h3>${amiibo.character}</h3>
         <p>${amiibo.gameSeries}</p>
     `;
     cartContent.appendChild(cartItem);
+    remove.cartListener(amiibo);
 }
 
 export default templates;

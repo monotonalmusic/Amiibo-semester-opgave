@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -6,6 +8,50 @@
 
 img {
     max-width: 100%;
+}
+
+p, button, a {
+    font-family: Josefin Sans, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: Josefin Sans, sans-serif;
+}
+
+/*header*/
+
+#logo-div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    width: 40%;
+}
+
+#logo-text {
+    font-size: calc(2rem + 2vw);
+}
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+  
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+}
+#lblCartCount {
+      font-size: 1.5rem;
+      background: #ff0000;
+      color: #fff;
+      padding: 0 5px;
+      vertical-align: top;
+      margin-left: -10px; 
 }
 
 #main-div {

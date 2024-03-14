@@ -18,10 +18,17 @@ generate.allAmiibos = async () => {
 generate.amiibo = async (amiibo) => {
     console.log(amiibo);
     templates.amiiboCard(amiibo);
-    remove.cartListener(amiibo);
     listeners.addCart(amiibo);
 
 };
+
+generate.cart = async () => {
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        let amiibo = JSON.parse(localStorage.getItem(key));
+        templates.cartItem(amiibo);
+    }
+}
 
 
 export default generate;
