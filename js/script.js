@@ -3,6 +3,8 @@ import generate from './generate.js';
 import storage from './storage.js'; 
 import templates from './templates.js';
 
+
+
 templates.header();
 
 storage.characters().then(() => {
