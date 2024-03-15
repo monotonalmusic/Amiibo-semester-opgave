@@ -5,7 +5,7 @@ const generate = {};
 
 generate.allAmiibos = async () => {
     console.log('generating')
-    for (let i = 0; i < sessionStorage.length; i++) {
+    for (let i = 1; i < sessionStorage.length; i++) {
         let key = sessionStorage.key(i);
         let amiibo = JSON.parse(sessionStorage.getItem(key));
         generate.amiibo(amiibo);

@@ -32,13 +32,13 @@ templates.header = () => {
     let header = document.querySelector('#header-div');
     header.innerHTML = `
     <a href="index.html"><div id="logo-div">
-        <img src="../Amiibo-semester-opgave/images/amiibo-logo.png" id="logo-img">
+        <img src="/images/amiibo-logo.png" id="logo-img">
         <p id="logo-text">DEPOT</p>
     </div></a>
     <div id="header-right">
         <div id="cart">
             <div id="cart-icon-div">
-                <img id="cart-icon" src="../Amiibo-semester-opgave/images/shopping-cart-outline-svgrepo-com.svg">
+                <img id="cart-icon" src="/images/shopping-cart-outline-svgrepo-com.svg">
                 <span class='badge badge-warning' id='lblCartCount'>0</span>
             </div>
             <div id="cart-content">
