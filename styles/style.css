@@ -134,6 +134,7 @@ a {
 
 #cart-icon {
     height: 100px;
+    cursor: pointer;
 }
 
 /*main*/
