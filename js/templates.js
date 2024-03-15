@@ -2,7 +2,6 @@ import listeners from "./addlisteners.js";
 
 const templates = {}; 
 
-
 templates.amiiboCard = (amiibo) => {
     let mainDiv = document.querySelector('#main-div');
     let amiiboCard = document.createElement('div');
@@ -10,7 +9,7 @@ templates.amiiboCard = (amiibo) => {
     amiiboCard.classList.add('amiibo-card');
     amiiboCard.innerHTML = `
         <h2>${amiibo.character}</h2>
-        <a href="${amiibo.character}.html"><img src="${amiibo.image}"class="big-amiibo-img" alt="${amiibo.character}"></a>
+        <a href="singlecharacter.html?id=${amiibo.character}"><img src="${amiibo.image}"class="big-amiibo-img" alt="${amiibo.character}"></a>
         <button class="add-cart-button pretty-button">Add to cart</button>
     `;
     mainDiv.appendChild(amiiboCard);
@@ -23,7 +22,7 @@ templates.cartItem = (amiibo) => {
     cartItem.id = `${amiibo.character}-cart`;
     cartItem.innerHTML = `
         <h3>${amiibo.character}</h3>
-        <button class="pretty-button remove-button" id="${amiibo.character}-button">Remove</button>
+        <button class="remove-button" id="${amiibo.character}-button">x</button>
     `;
     cartContent.appendChild(cartItem);
     listeners.removeCart(amiibo);

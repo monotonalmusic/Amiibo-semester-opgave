@@ -86,9 +86,14 @@ a {
     width: 125px;
 }
 
-.pretty-button.remove-button {
+.remove-button {
+    border-radius: 25%;
+    border-style: none;
+    padding: 2px;
     background-color: #E5131C;
-    width: 75px;
+    width: 20px;
+    text-align: center;
+
 }
 
 .cart-item {
@@ -96,6 +101,7 @@ a {
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
+    gap: 5px;
     width: 100%;
     background-color: #f8f8f8;
 

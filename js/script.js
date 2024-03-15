@@ -8,9 +8,18 @@ templates.header();
 storage.characters().then(() => {
     listeners.cart();
 
-    if (sessionStorage.length > 0) {
-        generate.allAmiibos();
+    if (document.title === 'Index') {
+        if (sessionStorage.length > 0) {
+            generate.allAmiibos();
+        }
     }
+
+    if (document.title === 'Single Character') {
+        if (sessionStorage.length > 0) {
+            generate.singleAmiibo();
+        }
+    }
+
 
     if (localStorage.length > 0) {
         generate.cart();

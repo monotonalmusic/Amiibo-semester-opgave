@@ -10,8 +10,7 @@ generate.allAmiibos = async () => {
         let amiibo = JSON.parse(sessionStorage.getItem(key));
         generate.amiibo(amiibo);
         
-    };
-    
+    }; 
 };
 
 generate.amiibo = async (amiibo) => {
@@ -29,21 +28,13 @@ generate.cart = async () => {
     }
 };
 
-// generate.mario = async () => {
-
-// };
-
-// generate.luigi = async () => {
-
-// };
-
-// generate.yoshi = async () => {
-
-// };
-
-// generate.zelda = async () => {
-
-// };
+generate.singleAmiibo = async () => {
+    const search = location.search;
+    const postID = new URLSearchParams(search).get('id');
+    console.log(postID);
+    const foundPost = JSON.parse(sessionStorage.getItem(postID));
+    generate.amiibo(foundPost);
+};
 
 
 
