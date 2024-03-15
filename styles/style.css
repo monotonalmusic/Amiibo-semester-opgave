@@ -153,8 +153,8 @@ a {
     flex-flow: column;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
-    height: 80dvh;
+    gap: 1rem;
+    height: 70dvh;
 }
 
 
