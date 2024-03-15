@@ -23,11 +23,8 @@ a {
     color: black;
 }
 
-#cart .show {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+#cart .hide {
+    display: none;
 }
 
 
@@ -81,7 +78,10 @@ a {
 }
 
 #cart-content {
-    display: none;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 1rem;
 
 }
