@@ -6,14 +6,19 @@ const listeners = {};
 listeners.addCart = (amiibo) => {
     let button = document.querySelector(`#${amiibo.character} .add-cart-button`);
     button.addEventListener('click', () => {
-        console.log('button clicked');
-        if (localStorage.key(amiibo.character) === null){
-            let retrievedCharacter = JSON.parse(sessionStorage.getItem(amiibo.character));
-            localStorage.setItem(amiibo.character, JSON.stringify(retrievedCharacter));
-            let badge = document.querySelector('#lblCartCount');
-            badge.textContent = localStorage.length;
-            templates.cartItem(amiibo);
-            listeners.removeCart(amiibo);
+        let retrievedCharacter = JSON.parse(sessionStorage.getItem(amiibo.character));
+        if (localStorage.key(retrievedCharacter.character) === retrievedCharacter.character) {
+            console.log(retrievedCharacter.character)
+            console.log('returned')
+            return;
+        } else {
+        console.log('button clicked'); 
+        let retrievedCharacter = JSON.parse(sessionStorage.getItem(amiibo.character));
+        localStorage.setItem(amiibo.character, JSON.stringify(retrievedCharacter));
+        let badge = document.querySelector('#lblCartCount');
+        badge.textContent = localStorage.length;
+        templates.cartItem(amiibo);
+        listeners.removeCart(amiibo);
         }
     });
     
